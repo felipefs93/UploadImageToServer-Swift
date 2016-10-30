@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageUpload" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SxO-BX-NGp">
+                                <rect key="frame" x="16" y="20" width="133" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="APa-mr-Dsm"/>
+                                    <constraint firstAttribute="width" constant="133" id="ixx-Ul-0ap"/>
+                                </constraints>
+                                <state key="normal" title="Select Photo"/>
+                                <connections>
+                                    <action selector="selectPhotoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="za6-L0-LkQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0x4-5V-ccG">
+                                <rect key="frame" x="233" y="20" width="126" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2uA-HB-lwO"/>
+                                    <constraint firstAttribute="width" constant="126" id="PTk-Wj-fYM"/>
+                                </constraints>
+                                <state key="normal" title="Upload Image"/>
+                                <connections>
+                                    <action selector="uploadButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0At-6d-Nrv"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aM7-gg-4O9">
+                                <rect key="frame" x="16" y="90" width="343" height="202"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="202" id="6DY-Ud-gAs"/>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Huk-V1-FCw">
+                                <rect key="frame" x="177" y="30" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="7nc-sz-Sge"/>
+                                    <constraint firstAttribute="width" constant="20" id="FBi-iU-NuP"/>
+                                </constraints>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SxO-BX-NGp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3cX-4S-gQm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aM7-gg-4O9" secondAttribute="trailing" id="7VW-5L-80a"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="SxO-BX-NGp" secondAttribute="leading" id="IpZ-8S-0IZ"/>
+                            <constraint firstItem="Huk-V1-FCw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U2A-xB-qch"/>
+                            <constraint firstItem="0x4-5V-ccG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="bpM-2F-qnu"/>
+                            <constraint firstItem="aM7-gg-4O9" firstAttribute="top" secondItem="Huk-V1-FCw" secondAttribute="bottom" constant="40" id="c6s-r7-REx"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="aM7-gg-4O9" secondAttribute="leading" id="hw4-u6-go8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0x4-5V-ccG" secondAttribute="trailing" id="lO7-tE-8lh"/>
+                            <constraint firstItem="Huk-V1-FCw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="rWA-lF-Uvu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myActivityIndicator" destination="Huk-V1-FCw" id="W0r-LU-AZa"/>
+                        <outlet property="myImageView" destination="aM7-gg-4O9" id="vLA-R0-pMd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="136.28185907046478"/>
+        </scene>
+    </scenes>
+</document>
